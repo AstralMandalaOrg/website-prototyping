@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — AstralMandala (demo v1)</title>
+  <meta name="description" content="AstralMandala product pathway — from free entry to enterprise and partnership offers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-v1.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="https://astralmandala.com" target="_blank" rel="noreferrer">
+        <img
+          class="site-header__logo"
+          src="assets/Astral-mandala-logo-white.svg"
+          alt="AstralMandala"
+          width="160"
+          height="40"
+        >
+      </a>
+      <nav aria-label="Page sections">
+        <ul class="site-nav">
+          <li><a href="#free">Free</a></li>
+          <li><a href="#path">Path</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#organisation">Organisation</a></li>
+          <li><a href="#channels">Partners</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </nav>
+      <span class="demo-badge" title="Static demo — not connected to live checkout or CRM">Demo v1</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section page-section--first" id="free">
+      <div class="container">
+        <header class="page-section__head" id="free-section-head"></header>
+        <div class="free-grid" id="free-root" role="region" aria-label="Free offers"></div>
+      </div>
+    </section>
+
+    <section class="page-section" id="path">
+      <div class="container">
+        <header class="page-section__head" id="path-section-head"></header>
+
+        <div
+          class="ladder-scroll"
+          id="ladder-root"
+          role="region"
+          aria-label="Product ladder: Diagnostic, Mandala14, Mandala42"
+          tabindex="0"
+        ></div>
+
+        <div id="quotes-root"></div>
+      </div>
+    </section>
+
+    <section class="page-section" id="leadership">
+      <div class="container">
+        <header class="page-section__head">
+          <p class="eyebrow">Leadership</p>
+          <h2 class="section-title">Still Point Leaders Series</h2>
+          <p class="section-lead" id="stillpoint-intro"></p>
+        </header>
+        <div class="stillpoint-grid" id="stillpoint-list"></div>
+        <div class="stillpoint-cta"></div>
+      </div>
+    </section>
+
+    <section class="page-section" id="organisation">
+      <div class="container">
+        <header class="page-section__head">
+          <p class="eyebrow">Organisation</p>
+          <h2 class="section-title">Organisation and enterprise scale</h2>
+          <p class="section-lead">
+            Pre-structured packages and bespoke design for organisations ready to invest in human capacity as infrastructure.
+          </p>
+        </header>
+        <div class="org-grid" id="org-root"></div>
+      </div>
+    </section>
+
+    <section class="page-section" id="channels">
+      <div class="container">
+        <header class="page-section__head" id="channels-section-head"></header>
+        <p class="section-lead" id="channels-section-lead"></p>
+        <div class="channel-grid" id="channels-root"></div>
+      </div>
+    </section>
+
+    <section class="page-section" id="newsletter">
+      <div class="container">
+        <header class="page-section__head">
+          <p class="eyebrow">Stay connected</p>
+          <h2 class="section-title">Join our newsletter</h2>
+          <p class="section-lead">
+            Every engagement should lead here — keep informed as you move through the pathway.
+          </p>
+        </header>
+        <div class="newsletter-panel">
+          <p class="newsletter-panel__note">
+            Demo form: submits via your email client to hello@astralmandala.com. Not connected to live CRM yet.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+            </div>
+            <div class="field field--full">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+            <div class="field field--full">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field field--full">
+              <button type="submit" class="btn btn--primary">Keep me informed</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        © 2026 AstralMandala. Demo v1 — not live checkout.
+        <a href="https://astralmandala.com" target="_blank" rel="noreferrer">astralmandala.com</a>
+      </p>
+      <p>
+        <a href="mailto:hello@astralmandala.com">hello@astralmandala.com</a>
+        ·
+        <a href="https://www.linkedin.com/company/astralmandala" target="_blank" rel="noreferrer">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="products-render.js"></script>
+</body>
+</html>
