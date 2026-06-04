@@ -12,12 +12,13 @@ Enable once: **Settings → Pages →** branch `main`, folder `/ (root)`.
 
 | Demo | Entry |
 |------|--------|
+| Products page v3 (current) | [index-v3.html](index-v3.html) — v2-style free row; Still Point Leaders Series (3 cards) |
+| Products page v2 | [index-v2.html](index-v2.html) |
 | Products page v1 (full) | [index-v1.html](index-v1.html) |
-| Products page v2 (simple) | [index-v2.html](index-v2.html) — free cards inline |
-| Partnerships detail (v2) | [partnerships.html](partnerships.html) |
+| Partnerships detail | [partnerships.html](partnerships.html) (v3 data) |
 | Product detail pages | [products/product.html?p=mandala14](products/product.html?p=mandala14) (etc.) |
 
-Product pages use `?p=` slugs: `sayit`, `weekly-briefing`, `thoughtful-updates`, `diagnostic`, `still-point`, `mandala14`, `mandala42`. Copy in [product-pages-data.js](product-pages-data.js). **Mandala14** and **Mandala42** share a Global Invite–style layout (product logo, app stack, four pillars, three mobile screenshots from [assets/global-invite/](assets/global-invite/)). Mandala14 links to the live [Global Invite](https://astralmandala.com/global-invite/) campaign.
+Product pages use `?p=` slugs: `sayit`, `weekly-briefing`, `thoughtful-updates`, `exec-briefing`, `response-to-risk`, `mandala14`, `mandala42`, `still-point`, etc. Copy in [product-pages-data.js](product-pages-data.js). **Mandala14** and **Mandala42** share a Global Invite–style layout (product logo, app stack, four pillars, three mobile screenshots from [assets/global-invite/](assets/global-invite/)). Mandala14 links to the live [Global Invite](https://astralmandala.com/global-invite/) campaign.
 
 ## Local preview
 

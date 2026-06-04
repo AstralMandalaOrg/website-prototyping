@@ -1,0 +1,30 @@
+/* v3 — same as v2 layout; three-column Still Point ladder */
+
+.ladder-scroll--three {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ladder-scroll--three .product-card {
+  flex: 0 0 min(280px, 88vw);
+  scroll-snap-align: start;
+  min-height: 360px;
+}
+
+@media (min-width: 1000px) {
+  .ladder-scroll--three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .ladder-scroll--three .product-card {
+    flex: none;
+    min-width: 0;
+  }
+}

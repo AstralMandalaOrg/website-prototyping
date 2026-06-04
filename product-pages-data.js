@@ -27,7 +27,8 @@ window.AM_PRODUCT_PAGES = {
     ],
   },
   links: {
-    home: "../index-v2.html",
+    home: "../index-v3.html",
+    homeV2: "../index-v2.html",
     contact: "https://astralmandala.com/contact/",
     globalInvite: "https://astralmandala.com/global-invite/",
     sayIt: "https://sayit.astralmandala.com",
@@ -44,7 +45,7 @@ window.AM_PRODUCT_PAGES = {
         "SayIt is a simple way to send a nourishing message to a colleague — private, invitation-based, and born from the AstralMandala mission.",
       price: "Free",
       ctaPrimary: { label: "Try SayIt", href: "https://sayit.astralmandala.com", external: true },
-      ctaSecondary: { label: "Back to all products", href: "../index-v2.html#free" },
+      ctaSecondary: { label: "Back to all products", href: "../index-v3.html#free" },
       introTitle: "A living message, not a performance review",
       introParagraphs: [
         "How often do we feel something real about another person and say nothing? SayIt creates a structured moment to share truth that nourishes — while the person is still here to receive it.",
@@ -70,7 +71,7 @@ window.AM_PRODUCT_PAGES = {
         "A live weekly session introducing the AstralMandala approach — human capacity, limbic readiness, and why most wellbeing spend misses the mark.",
       price: "Free",
       ctaPrimary: { label: "Book for free", href: "https://astralmandala.com/contact/" },
-      ctaSecondary: { label: "Back to all products", href: "../index-v2.html#free" },
+      ctaSecondary: { label: "Back to all products", href: "../index-v3.html#free" },
       introTitle: "Orientation, not a sales pitch",
       introParagraphs: [
         "The briefing is for leaders, HR professionals, and individuals who want to understand the macro story and the practical protocols before committing to a programme.",
@@ -96,7 +97,7 @@ window.AM_PRODUCT_PAGES = {
         "Occasional updates on events, insight, and what's moving at AstralMandala — written for people who care about human capacity and serious wellbeing.",
       price: "Free",
       ctaPrimary: { label: "Keep me informed", href: "https://astralmandala.com/contact/" },
-      ctaSecondary: { label: "Read on the main site", href: "https://astralmandala.com/news/", external: true },
+      ctaSecondary: { label: "Back to all products", href: "../index-v3.html#free" },
       introTitle: "Stay in the conversation",
       introParagraphs: [
         "This is our newsletter in spirit, without the noise. We share articles, event invitations, and perspective on wellbeing, leadership, and systems change.",
@@ -122,7 +123,7 @@ window.AM_PRODUCT_PAGES = {
         "A half-day or full-day diagnostic that shows where your people and teams actually are — and what to do next before investing in programmes.",
       price: "£1,000",
       ctaPrimary: { label: "Book diagnostic", href: "https://astralmandala.com/contact/" },
-      ctaSecondary: { label: "Back to all products", href: "../index-v2.html" },
+      ctaSecondary: { label: "Back to all products", href: "../index-v3.html" },
       introTitle: "Clarity before commitment",
       introParagraphs: [
         "Most organisations invest in wellbeing without knowing the baseline emotional capacity of their workforce. The diagnostic makes that visible — desensitised, ethical, and actionable.",
@@ -148,7 +149,7 @@ window.AM_PRODUCT_PAGES = {
         "Still Point is precision leadership architecture for executives and senior leaders — personal recalibration while remaining fully in role.",
       price: "£3,000",
       ctaPrimary: { label: "Book a call", href: "https://astralmandala.com/contact/" },
-      ctaSecondary: { label: "Back to all products", href: "../index-v2.html" },
+      ctaSecondary: { label: "Back to programmes", href: "../index-v3.html#programmes" },
       introTitle: "When pressure has narrowed capacity",
       introParagraphs: [
         "Under sustained complexity, leaders can experience functional limbic atrophy — reduced range, faster reactivity, diminished recovery. Still Point works at the human system level, not skills training alone.",
@@ -246,7 +247,7 @@ window.AM_PRODUCT_PAGES = {
         "84 days across three phases — nourishment (Mandala14), core methodology, and integration. The flagship organisational and personal transformation offer.",
       price: "Pricing TBC",
       ctaPrimary: { label: "Join waitlist", href: "https://astralmandala.com/contact/" },
-      ctaSecondary: { label: "Back to all products", href: "../index-v2.html" },
+      ctaSecondary: { label: "Back to all products", href: "../index-v3.html" },
       introTitle: "When you are ready for lasting change",
       introParagraphs: [
         "Mandala42 creates the internal neurological conditions under which durable growth becomes possible. It includes 1-to-1 mentor support and measurement through the Emotional Capacity Index (ECI).",
@@ -262,6 +263,58 @@ window.AM_PRODUCT_PAGES = {
       audience: "Businesses and individuals ready for deep commitment.",
       formTitle: "Join the Mandala42 waitlist",
       formNote: "Pricing to be confirmed. Demo waitlist form.",
+    },
+    "exec-briefing": {
+      slug: "exec-briefing",
+      title: "Executive briefing — Know the Unknowns",
+      eyebrow: "Still Point Leaders Series",
+      heroTitle: "Know the Unknowns",
+      heroLead:
+        "A 90-minute executive briefing for up to 20 leaders — orientation to human capacity, emotional granularity, and the Still Point Leaders Series.",
+      price: "£3,000",
+      ctaPrimary: { label: "Book briefing", href: "https://astralmandala.com/contact/" },
+      ctaSecondary: { label: "Back to programmes", href: "../index-v3.html#programmes" },
+      introTitle: "Orientation for senior leaders",
+      introParagraphs: [
+        "A 90-minute briefing for up to 20 leaders — introducing human capacity, emotional granularity, and why conventional leadership development often misses the felt sense under pressure.",
+        "A practical entry to the Still Point Leaders Series before a full-day immersion or Mandala14.",
+      ],
+      includesTitle: "In 90 minutes",
+      includes: [
+        "Up to 20 participants",
+        "Emotional granularity and the research case",
+        "Why EI training often misses the felt sense",
+        "Clear view of Still Point and Mandala42 next steps",
+      ],
+      audience: "C-suite, senior partners, boards, and leadership teams exploring AstralMandala.",
+      formTitle: "Book an executive briefing",
+      formNote: "Demo form — we will follow up to schedule.",
+    },
+    "response-to-risk": {
+      slug: "response-to-risk",
+      title: "Response to Risk — Still Point",
+      eyebrow: "Still Point Leaders Series",
+      heroTitle: "One day to recalibrate under complexity",
+      heroLead:
+        "Still Point — Response to Risk is a full-day immersion (9am–5pm) for up to 20 executives — personal recalibration while remaining fully in role.",
+      price: "£XXX",
+      ctaPrimary: { label: "Explore the day", href: "https://astralmandala.com/contact/" },
+      ctaSecondary: { label: "Back to programmes", href: "../index-v3.html#programmes" },
+      introTitle: "Leadership architecture, not skills training",
+      introParagraphs: [
+        "Under sustained complexity, leaders can experience reduced range, faster reactivity, and diminished recovery. Response to Risk works at the human system level — not skills training alone.",
+        "A full-day Still Point immersion for executives who need recalibration while remaining fully in role.",
+      ],
+      includesTitle: "The day includes",
+      includes: [
+        "9am–5pm facilitated immersion",
+        "Up to 20 senior participants",
+        "Precision leadership recalibration",
+        "Pathway into Mandala14 and Mandala42",
+      ],
+      audience: "Executives and senior leaders under sustained organisational pressure.",
+      formTitle: "Book Response to Risk",
+      formNote: "Demo form — we will follow up to schedule.",
     },
   },
 };
