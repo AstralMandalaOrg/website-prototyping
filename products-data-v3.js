@@ -129,7 +129,7 @@ window.AM_V3_DATA = {
           "White-label or co-branded delivery",
           "Mandala14 through to enterprise pathways",
           "Revenue share and partner enablement",
-        ],
+    ],
       },
       {
         id: "embedded-benefit",
