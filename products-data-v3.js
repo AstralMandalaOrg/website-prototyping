@@ -1,4 +1,4 @@
-/** AstralMandala products page v3 — same layout as v2; Still Point Leaders Series (3 programmes) */
+/** AstralMandala products page v3 — same layout as v2; Still Point Leaders Series (4 programmes) */
 window.AM_V3_DATA = {
   links: {
     mainSite: "https://astralmandala.com",
@@ -48,10 +48,10 @@ window.AM_V3_DATA = {
     ],
   },
   section: {
-    eyebrow: "Products",
-    title: "Still Point Leaders Series",
+    eyebrow: "Still Point Leaders Series",
+    title: "Go deeper",
     lead:
-      "Executive orientation, a full-day immersion, and the Mandala14 nourishment protocol — designed to ready leaders and teams for deeper Mandala42 work.",
+      "Take what you need. From an executive briefing or diagnostic through Still Point and Mandala — explored at whatever depth feels right.",
   },
   ladder: [
     {
@@ -92,6 +92,19 @@ window.AM_V3_DATA = {
         "Digital journey with live mentor support",
       ],
       ctaPrimary: { label: "Buy now", href: "products/product.html?p=mandala14#book" },
+    },
+    {
+      id: "m42",
+      name: "Mandala42",
+      price: "£XXX per person",
+      role: "Full programme for lasting change",
+      pageSlug: "mandala42",
+      bullets: [
+        "84-day limbic reset (12 weeks)",
+        "Full protocol with ECI measurement",
+        "Flagship organisational transformation",
+      ],
+      ctaPrimary: { label: "Join waitlist", href: "products/product.html?p=mandala42#book" },
     },
   ],
   partnershipTeaser: {
