@@ -13,7 +13,7 @@ Enable once: **Settings → Pages →** branch `main`, folder `/ (root)`.
 | Demo | Entry |
 |------|--------|
 | Products page v1 (full) | [index-v1.html](index-v1.html) |
-| Products page v2 (simple) | [index-v2.html](index-v2.html) |
+| Products page v2 (simple) | [index-v2.html](index-v2.html) — free cards inline |
 | Partnerships detail (v2) | [partnerships.html](partnerships.html) |
 
 ## Local preview

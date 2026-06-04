@@ -76,17 +76,38 @@
     });
   }
 
-  function renderPartnershipTeaser() {
-    const root = document.getElementById("partnership-teaser-root");
-    const box = data.partnershipTeaser;
+  function renderTeaserBox(rootId, box) {
+    const root = document.getElementById(rootId);
     if (!root || !box) return;
     root.appendChild(
-      el("article", { className: "partnership-teaser" }, [
-        el("h3", { className: "partnership-teaser__title" }, [box.title]),
-        el("p", { className: "partnership-teaser__body" }, [box.body]),
+      el("article", { className: "page-teaser" }, [
+        el("h3", { className: "page-teaser__title" }, [box.title]),
+        el("p", { className: "page-teaser__body" }, [box.body]),
         el("a", { className: "btn btn--primary", href: box.cta.href }, [box.cta.label]),
       ])
     );
+  }
+
+  function renderFreeSection() {
+    const section = data.freeSection;
+    const root = document.getElementById("free-v2-root");
+    if (!section || !root) return;
+
+    renderSectionHead("free-section-head", section);
+
+    section.offers.forEach((offer) => {
+      root.appendChild(
+        el("article", { className: "free-card" }, [
+          el("h3", { className: "free-card__name" }, [offer.name]),
+          el("p", { className: "free-card__price" }, [offer.price]),
+          el("p", { className: "free-card__detail" }, [offer.detail]),
+          el("div", { className: "product-card__actions" }, [
+            primaryButton(offer.ctaPrimary),
+            learnMoreButton(offer.ctaSecondary),
+          ]),
+        ])
+      );
+    });
   }
 
   function renderPartnershipsPage() {
@@ -128,8 +149,9 @@
   if (mode === "partnerships") {
     renderPartnershipsPage();
   } else {
+    renderFreeSection();
     renderSectionHead("v2-section-head", data.section);
     renderLadder();
-    renderPartnershipTeaser();
+    renderTeaserBox("partnership-teaser-root", data.partnershipTeaser);
   }
 })();

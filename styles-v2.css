@@ -15,8 +15,7 @@
   min-height: 360px;
 }
 
-.partnership-teaser {
-  margin-top: 2.5rem;
+.page-teaser {
   padding: 2rem 2.25rem;
   border-radius: var(--radius-xl);
   border: 1px solid var(--line-soft);
@@ -26,23 +25,35 @@
   margin-inline: auto;
 }
 
-.partnership-teaser__title {
+#free {
+  margin-bottom: 2.5rem;
+}
+
+#partnership-teaser-root .page-teaser {
+  margin-top: 2.5rem;
+}
+
+.page-teaser__title {
   margin: 0 0 0.75rem;
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
   font-weight: 500;
 }
 
-.partnership-teaser__body {
+.page-teaser__body {
   margin: 0 auto 1.5rem;
-  max-width: 40ch;
+  max-width: 42ch;
   color: var(--muted);
   font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.55;
 }
 
-.partnership-teaser .btn {
+.page-teaser .btn {
   min-width: 14rem;
+}
+
+.page-section__head--spaced {
+  margin-top: 0.5rem;
 }
 
 .site-nav__versions {
@@ -98,12 +109,12 @@
 }
 
 @media (max-width: 900px) {
-  .partnership-teaser {
+  .page-teaser {
     padding: 1.5rem;
     text-align: left;
   }
 
-  .partnership-teaser__body {
+  .page-teaser__body {
     max-width: none;
   }
 }

@@ -26,7 +26,8 @@
       <nav aria-label="Page sections" class="site-nav__versions">
         <a href="index-v1.html">v1</a>
         <a href="index-v2.html" class="is-active">v2</a>
-        <a href="partnerships.html">Partnerships</a>
+        <a href="#free">Free</a>
+        <a href="partnerships.html">Partners</a>
       </nav>
       <span class="demo-badge">Demo v2</span>
     </div>
@@ -35,7 +36,12 @@
   <main>
     <section class="page-section page-section--first" id="programmes">
       <div class="container">
-        <header class="page-section__head" id="v2-section-head"></header>
+        <div id="free">
+          <header class="page-section__head" id="free-section-head"></header>
+          <div class="free-grid" id="free-v2-root" role="region" aria-label="Free offers"></div>
+        </div>
+
+        <header class="page-section__head page-section__head--spaced" id="v2-section-head"></header>
 
         <div
           class="ladder-scroll ladder-scroll--four"
