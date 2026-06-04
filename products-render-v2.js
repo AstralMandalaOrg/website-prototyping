@@ -51,6 +51,14 @@
     if (section.lead) head.appendChild(el("p", { className: "section-lead" }, [section.lead]));
   }
 
+  function learnMoreForItem(item) {
+    if (item.ctaSecondary) return learnMoreButton(item.ctaSecondary);
+    if (item.pageSlug && data.productPage) {
+      return learnMoreButton({ label: "Learn more", href: data.productPage(item.pageSlug) });
+    }
+    return learnMoreButton();
+  }
+
   function renderProductCard(product, tier) {
     return el("article", { className: `product-card product-card--tier-${tier}` }, [
       el("h3", { className: "product-card__name" }, [product.name]),
@@ -63,7 +71,7 @@
       ),
       el("div", { className: "product-card__actions" }, [
         primaryButton(product.ctaPrimary),
-        learnMoreButton(),
+        learnMoreForItem(product),
       ]),
     ]);
   }
@@ -103,7 +111,7 @@
           el("p", { className: "free-card__detail" }, [offer.detail]),
           el("div", { className: "product-card__actions" }, [
             primaryButton(offer.ctaPrimary),
-            learnMoreButton(offer.ctaSecondary),
+            learnMoreForItem(offer),
           ]),
         ])
       );
@@ -134,7 +142,9 @@
         parts.push(el("p", { className: "channel-card__examples" }, [channel.examples]));
       }
       parts.push(el("ul", null, channel.bullets.map((b) => el("li", null, [b]))));
-      root.appendChild(el("article", { className: "channel-card" }, parts));
+      const cardAttrs = { className: "channel-card" };
+      if (channel.id) cardAttrs.id = channel.id;
+      root.appendChild(el("article", cardAttrs, parts));
     });
 
     const ctaWrap = document.getElementById("partnerships-cta");
