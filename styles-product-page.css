@@ -178,3 +178,212 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Mandala14 / Mandala42 — Global Invite–style app showcase */
+
+.mandala-brand {
+  padding: 1rem 0 2rem;
+  text-align: center;
+}
+
+.mandala-brand__logo {
+  width: min(100%, 28rem);
+  height: auto;
+  margin-inline: auto;
+}
+
+.mandala-story {
+  padding: 2rem 0 2.5rem;
+}
+
+.mandala-story__grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr minmax(220px, 380px);
+  align-items: center;
+}
+
+.mandala-story__title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.mandala-story__copy p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.65;
+  font-size: 1.02rem;
+}
+
+.mandala-story__stack {
+  margin: 0;
+  justify-self: center;
+}
+
+.mandala-story__stack img {
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.45));
+}
+
+.mandala-pillars {
+  padding: 2rem 0;
+  background: linear-gradient(180deg, transparent, rgba(74, 47, 160, 0.14), transparent);
+}
+
+.mandala-pillars__grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mandala-pillar {
+  padding: 1.35rem 1.1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-soft);
+  background: var(--bg-card);
+  text-align: center;
+}
+
+.mandala-pillar__icon {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.mandala-pillar__title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.mandala-screens {
+  padding: 2.5rem 0 3rem;
+}
+
+.mandala-screens__heading {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.mandala-screens__lead {
+  margin: 0 auto 2rem;
+  max-width: 36rem;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.mandala-screens__grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+}
+
+.mandala-screen figure {
+  margin: 0;
+}
+
+.mandala-screen img {
+  width: 100%;
+  max-width: 14rem;
+  margin-inline: auto;
+  display: block;
+  border-radius: 1.25rem;
+  border: 1px solid var(--line-soft);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.mandala-screen figcaption {
+  margin-top: 0.85rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.mandala-schedule {
+  padding: 2rem 0 2.5rem;
+}
+
+.mandala-schedule__inner {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(145deg, rgba(141, 109, 225, 0.16), var(--bg-card));
+}
+
+.mandala-schedule__title {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--mint);
+}
+
+.mandala-schedule__dates {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.mandala-schedule__dates li {
+  font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.mandala-schedule__note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+@media (max-width: 960px) {
+  .mandala-pillars__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .mandala-story__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mandala-story__stack {
+    order: -1;
+  }
+
+  .mandala-screens__grid {
+    grid-template-columns: 1fr;
+    max-width: 16rem;
+    margin-inline: auto;
+  }
+
+  .mandala-pillars__grid {
+    grid-template-columns: 1fr;
+  }
+}

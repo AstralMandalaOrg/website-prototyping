@@ -39,6 +39,116 @@
     );
   }
 
+  const pillarIcons = {
+    protocol: "◈",
+    daily: "▶",
+    journal: "▣",
+    live: "◎",
+  };
+
+  function renderMandalaShowcase(page) {
+    const assets = catalog.mandalaAppAssets;
+    const show = page.mandalaShowcase;
+    if (!show || !assets) return null;
+
+    const brand = el("section", { className: "mandala-brand" }, [
+      el("div", { className: "container mandala-brand__inner" }, [
+        el("img", {
+          className: "mandala-brand__logo",
+          src: show.logo.src,
+          alt: show.logo.alt,
+          width: "640",
+          height: "280",
+          loading: "lazy",
+        }),
+      ]),
+    ]);
+
+    const story = el("section", { className: "mandala-story" }, [
+      el("div", { className: "container mandala-story__grid" }, [
+        el("div", { className: "mandala-story__copy" }, [
+          el("h2", { className: "mandala-story__title" }, [show.storyTitle]),
+          ...show.storyParagraphs.map((p) => el("p", null, [p])),
+        ]),
+        el("figure", { className: "mandala-story__stack" }, [
+          el("img", {
+            src: assets.stack,
+            alt: "Mandala app on mobile",
+            width: "450",
+            height: "540",
+            loading: "lazy",
+          }),
+        ]),
+      ]),
+    ]);
+
+    const pillars = el("section", { className: "mandala-pillars" }, [
+      el("div", { className: "container" }, [
+        el(
+          "ul",
+          { className: "mandala-pillars__grid" },
+          assets.pillars.map((item) =>
+            el("li", { className: "mandala-pillar" }, [
+              el("span", { className: "mandala-pillar__icon", "aria-hidden": "true" }, [
+                pillarIcons[item.icon] || "◆",
+              ]),
+              el("h3", { className: "mandala-pillar__title" }, [item.title]),
+            ])
+          )
+        ),
+      ]),
+    ]);
+
+    const screens = el("section", { className: "mandala-screens" }, [
+      el("div", { className: "container" }, [
+        el("h2", { className: "mandala-screens__heading" }, ["Your digital companion"]),
+        el("p", { className: "mandala-screens__lead" }, [
+          "The Mandala journal on mobile — daily practice, cohort progress, and what's ahead.",
+        ]),
+        el(
+          "ul",
+          { className: "mandala-screens__grid" },
+          assets.screens.map((screen) =>
+            el("li", { className: "mandala-screen" }, [
+              el("figure", null, [
+                el("img", {
+                  src: screen.src,
+                  alt: screen.alt,
+                  loading: "lazy",
+                }),
+                el("figcaption", null, [screen.caption]),
+              ]),
+            ])
+          )
+        ),
+      ]),
+    ]);
+
+    const scheduleBlock = show.schedule
+      ? el("section", { className: "mandala-schedule" }, [
+          el("div", { className: "container mandala-schedule__inner" }, [
+            el("h2", { className: "mandala-schedule__title" }, [show.schedule.title]),
+            el(
+              "ul",
+              { className: "mandala-schedule__dates" },
+              show.schedule.lines.map((line) => el("li", null, [line]))
+            ),
+            show.schedule.note
+              ? el("p", { className: "mandala-schedule__note" }, [show.schedule.note])
+              : null,
+          ]),
+        ])
+      : null;
+
+    return el("div", { className: "mandala-showcase" }, [
+      brand,
+      story,
+      pillars,
+      screens,
+      scheduleBlock,
+    ]);
+  }
+
   document.title = page.title;
 
   const root = document.getElementById("product-page-root");
@@ -79,6 +189,12 @@
   ]);
 
   root.appendChild(hero);
+
+  if (page.layout === "mandala-app") {
+    const showcase = renderMandalaShowcase(page);
+    if (showcase) root.appendChild(showcase);
+  }
+
   root.appendChild(body);
 
   if (page.highlightBox) {

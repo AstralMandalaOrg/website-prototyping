@@ -1,5 +1,31 @@
 /** Product detail pages — copy source (demo prototype) */
 window.AM_PRODUCT_PAGES = {
+  mandalaAppAssets: {
+    stack: "../assets/global-invite/app-stack.png",
+    screens: [
+      {
+        src: "../assets/global-invite/home-today.png",
+        alt: "Home — Today",
+        caption: "Today's practice at a glance",
+      },
+      {
+        src: "../assets/global-invite/cohort-completion.png",
+        alt: "Cohort completion",
+        caption: "Celebrate your cohort milestone",
+      },
+      {
+        src: "../assets/global-invite/home-upcoming.png",
+        alt: "Home — Upcoming",
+        caption: "See what's coming up",
+      },
+    ],
+    pillars: [
+      { title: "An unfolding 14-day nourishment protocol", icon: "protocol" },
+      { title: "Daily video podcasts, engagement and practices", icon: "daily" },
+      { title: "Use of the Mandala42 digital journal", icon: "journal" },
+      { title: "Three live mentor gatherings throughout", icon: "live" },
+    ],
+  },
   links: {
     home: "../index-v2.html",
     contact: "https://astralmandala.com/contact/",
@@ -141,8 +167,26 @@ window.AM_PRODUCT_PAGES = {
     },
     mandala14: {
       slug: "mandala14",
+      layout: "mandala-app",
       title: "Mandala14 — AstralMandala",
       eyebrow: "Products",
+      mandalaShowcase: {
+        logo: {
+          src: "../assets/global-invite/mandala14-logo-white.png",
+          alt: "Mandala14",
+        },
+        storyTitle: "14 days of nourishment and stabilisation",
+        storyParagraphs: [
+          "This part of the protocol forms the beginning of the whole Mandala limbic reset and raised human capacity process. It provides a structured sequence of daily engagement and practice designed to help you reconnect with emotional stability, clarity, and internal alignment.",
+          "The practices are simple but powerful. Over fourteen days participants gently prioritise sleep, nourishment, movement, nature, and connection — raising wellbeing simply and effectively.",
+          "When individuals stabilise internally, teams and communities become more stable externally. Participants join a mentored cohort with app access and live online mentor sessions.",
+        ],
+        schedule: {
+          title: "Global cohort dates",
+          lines: ["March 30 – April 12", "April 13 – April 26", "April 27 – May 10"],
+          note: "We will place you into the next available cohort.",
+        },
+      },
       heroTitle: "14 days of nourishment and stabilisation",
       heroLead:
         "The entry-level guided reset — Phase 1 of Mandala42, and a standalone protocol for individuals and organisations. Digital journey, mentor support, and daily practice.",
@@ -173,8 +217,30 @@ window.AM_PRODUCT_PAGES = {
     },
     mandala42: {
       slug: "mandala42",
+      layout: "mandala-app",
       title: "Mandala42 — AstralMandala",
       eyebrow: "Products",
+      mandalaShowcase: {
+        logo: {
+          src: "../assets/mandala42-logo-white.svg",
+          alt: "Mandala42",
+        },
+        storyTitle: "The full limbic reset protocol",
+        storyParagraphs: [
+          "Mandala42 was created to help restore human stability in complex times — 84 days across nourishment, core methodology, and integration.",
+          "Phase 1 (Mandala14) establishes safety and regulation. Phases 2 and 3 deepen emotional agency and durable change, with 1-to-1 mentor support and measurement through the Emotional Capacity Index (ECI).",
+          "The same Mandala digital journal guides you throughout — daily engagement, video content, practices, and live mentor gatherings.",
+        ],
+        schedule: {
+          title: "Three phases",
+          lines: [
+            "Phase 1 — Nourishment (Mandala14): 14 days",
+            "Phase 2 — Core methodology: 42 days",
+            "Phase 3 — Integration: 28 days",
+          ],
+          note: "Pricing and cohort scheduling to be confirmed.",
+        },
+      },
       heroTitle: "The full limbic reset protocol",
       heroLead:
         "84 days across three phases — nourishment (Mandala14), core methodology, and integration. The flagship organisational and personal transformation offer.",
