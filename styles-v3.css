@@ -1,13 +1,223 @@
-/* v3 — uses v2 ladder-scroll--four for programme row */
+/* v3 layout — pyramid: each row a little wider than the last */
 
-#v3-section-head .section-lead {
+.v3-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.v3-pyramid__tier {
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Tier 1 — narrow apex */
+.v3-pyramid__tier--1 {
+  max-width: min(20rem, 34%);
+}
+
+/* Tier 2 — mid band */
+.v3-pyramid__tier--2 {
+  max-width: min(52rem, 68%);
+}
+
+/* Tier 3 — widest base */
+.v3-pyramid__tier--3 {
+  max-width: 100%;
+}
+
+.page-section__head--center {
+  text-align: center;
+}
+
+.page-section__head--center .section-lead {
+  margin-inline: auto;
+}
+
+#v3-section-head .section-lead,
+#m42-section-head .section-lead {
   max-width: none;
   line-height: 1.65;
   font-size: 1.12rem;
 }
 
 @media (min-width: 900px) {
-  #v3-section-head .section-lead {
+  #v3-section-head .section-lead,
+  #m42-section-head .section-lead {
     max-width: 95%;
+  }
+}
+
+.v3-pyramid__tier--2 {
+  margin-top: 1.5rem;
+}
+
+.v3-pyramid__tier--3 {
+  margin-top: 1.5rem;
+}
+
+/* Cards fill their tier */
+.free-grid--single {
+  display: flex;
+  justify-content: center;
+}
+
+.free-grid--single .free-card {
+  width: 100%;
+  min-height: 280px;
+}
+
+.free-card--centered {
+  text-align: center;
+  align-items: center;
+}
+
+.free-card--centered .free-card__detail {
+  text-align: center;
+}
+
+.free-card--centered .product-card__actions {
+  width: 100%;
+}
+
+/* Still Point — three columns across the mid tier */
+.ladder-scroll--three {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ladder-scroll--three .product-card {
+  flex: 0 0 min(280px, 88vw);
+  scroll-snap-align: start;
+  min-height: 360px;
+}
+
+@media (min-width: 900px) {
+  .ladder-scroll--three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .ladder-scroll--three .product-card {
+    flex: none;
+    min-width: 0;
+  }
+}
+
+/* Mandala42 — wide panel, centred header, columns below */
+.m42-panel {
+  width: 100%;
+}
+
+.m42-card {
+  width: 100%;
+  padding: 2rem 2rem 1.75rem;
+}
+
+.m42-card__head {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.m42-card__head .product-card__name,
+.m42-card__head .product-card__price {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m42-card__head .product-card__role {
+  display: inline-block;
+  width: auto;
+  max-width: min(22rem, 88%);
+  margin: 0 auto 1rem;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.m42-card__flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.m42-card__flow-step {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+
+.m42-card__flow-sep {
+  color: var(--gold);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+.m42-card__bullets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.75rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.m42-card__bullets li {
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.m42-card__bullets li::before {
+  content: "◆ ";
+  color: var(--gold);
+  font-size: 0.55rem;
+  vertical-align: middle;
+}
+
+.m42-card__actions {
+  width: 100%;
+  max-width: min(20rem, 100%);
+  margin-inline: auto;
+}
+
+@media (min-width: 900px) {
+  .m42-card__actions {
+    max-width: calc((min(52rem, 68vw) - 2.5rem) / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .v3-pyramid__tier--1,
+  .v3-pyramid__tier--2,
+  .v3-pyramid__tier--3 {
+    max-width: 100%;
+  }
+
+  .v3-pyramid__tier--1 .free-card {
+    max-width: 20rem;
+    margin-inline: auto;
+  }
+
+  .m42-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .m42-card__flow {
+    gap: 0.4rem 0.85rem;
   }
 }

@@ -1,4 +1,4 @@
-/** AstralMandala products page v3 — same layout as v2; Still Point Leaders Series (4 programmes) */
+/** AstralMandala products page v3 */
 window.AM_V3_DATA = {
   links: {
     mainSite: "https://astralmandala.com",
@@ -15,8 +15,8 @@ window.AM_V3_DATA = {
     return `products/product.html?p=${slug}`;
   },
   freeSection: {
-    eyebrow: "Free",
-    title: "Dip your toe in",
+    eyebrow: "Dip your toe in",
+    title: "Free",
     offers: [
       {
         id: "sayit",
@@ -27,29 +27,11 @@ window.AM_V3_DATA = {
         ctaPrimary: { label: "Try SayIt", href: "https://sayit.astralmandala.com", external: true },
         ctaSecondary: { label: "Learn more", href: "products/product.html?p=sayit" },
       },
-      {
-        id: "briefing",
-        name: "Weekly briefing",
-        price: "Free",
-        detail: "30-minute live session — orientation to the AstralMandala approach.",
-        pageSlug: "weekly-briefing",
-        ctaPrimary: { label: "Book for free", href: "products/product.html?p=weekly-briefing#book" },
-        ctaSecondary: { label: "Learn more", href: "products/product.html?p=weekly-briefing" },
-      },
-      {
-        id: "informed",
-        name: "Thoughtful updates",
-        price: "Free",
-        detail: "Events, insight, and useful bits from AstralMandala — nurture in your inbox, not a blast.",
-        pageSlug: "thoughtful-updates",
-        ctaPrimary: { label: "Keep me informed", href: "products/product.html?p=thoughtful-updates#book" },
-        ctaSecondary: { label: "Learn more", href: "products/product.html?p=thoughtful-updates" },
-      },
     ],
   },
   section: {
-    eyebrow: "Still Point Leaders Series",
-    title: "Go deeper",
+    eyebrow: "Go deeper",
+    title: "Still Point Leaders Series",
     lead:
       "Take what you need. From an executive briefing or diagnostic through Still Point and Mandala — explored at whatever depth feels right.",
   },
@@ -93,25 +75,27 @@ window.AM_V3_DATA = {
       ],
       ctaPrimary: { label: "Buy now", href: "products/product.html?p=mandala14#book" },
     },
-    {
+  ],
+  mandala42Section: {
+    eyebrow: "Limbic reset",
+    title: "Mandala42 Protocol",
+    lead:
+      "The full 84-day limbic reset — nourishment, core methodology, and integration with mentor support and ECI measurement.",
+    product: {
       id: "m42",
       name: "Mandala42",
       price: "£XXX per person",
       role: "Full programme for lasting change",
       pageSlug: "mandala42",
+      flow: ["14 day Nourishment", "42 day Core", "14 day Integration"],
       bullets: [
-        "84-day limbic reset (12 weeks)",
-        "Full protocol with ECI measurement",
+        "84-day limbic reset",
+        "1-to-1 mentor support throughout",
+        "ECI measurement",
         "Flagship organisational transformation",
       ],
       ctaPrimary: { label: "Join waitlist", href: "products/product.html?p=mandala42#book" },
     },
-  ],
-  partnershipTeaser: {
-    title: "Government, NGOs, partners & collaboration",
-    body:
-      "Channel partners, embedded benefits, public-sector mandates, research pilots, and strategic collaboration — when delivery happens through or alongside other organisations.",
-    cta: { label: "Partnerships & channels", href: "partnerships.html" },
   },
   partnershipsPage: {
     eyebrow: "Partners & channels",
@@ -129,7 +113,7 @@ window.AM_V3_DATA = {
           "White-label or co-branded delivery",
           "Mandala14 through to enterprise pathways",
           "Revenue share and partner enablement",
-    ],
+        ],
       },
       {
         id: "embedded-benefit",

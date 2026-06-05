@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — AstralMandala (demo v3)</title>
-  <meta name="description" content="AstralMandala product overview — free offers and Still Point Leaders Series.">
+  <meta name="description" content="AstralMandala product overview — SayIt, Still Point Leaders Series, Mandala42.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -29,34 +29,48 @@
         <a href="index-v2.html">v2</a>
         <a href="index-v3.html" class="is-active">v3</a>
         <a href="#free">Free</a>
-        <a href="partnerships.html">Partners</a>
+        <a href="#programmes">Programmes</a>
       </nav>
       <span class="demo-badge">Demo v3</span>
     </div>
   </header>
 
   <main>
-    <section class="page-section page-section--first" id="programmes">
-      <div class="container">
-        <div id="free">
+    <section class="page-section page-section--first">
+      <div class="container v3-pyramid">
+        <div class="v3-pyramid__tier v3-pyramid__tier--1" id="free">
           <header class="page-section__head" id="free-section-head"></header>
-          <div class="free-grid" id="free-v3-root" role="region" aria-label="Free offers"></div>
+          <div class="free-grid free-grid--single" id="free-v3-root" role="region" aria-label="Free offers"></div>
         </div>
 
-        <header class="page-section__head page-section__head--spaced" id="v3-section-head"></header>
+        <div class="v3-pyramid__tier v3-pyramid__tier--2" id="programmes">
+          <header class="page-section__head page-section__head--spaced" id="v3-section-head"></header>
 
-        <div
-          class="ladder-scroll ladder-scroll--four"
-          id="ladder-v3-root"
-          role="region"
-          aria-label="Still Point Leaders Series: four programmes"
-          tabindex="0"
-        ></div>
+          <div
+            class="ladder-scroll ladder-scroll--three"
+            id="ladder-v3-root"
+            role="region"
+            aria-label="Still Point Leaders Series"
+            tabindex="0"
+          ></div>
+        </div>
 
-        <div id="partnership-teaser-root"></div>
+        <div class="v3-pyramid__tier v3-pyramid__tier--3" id="mandala42">
+          <header class="page-section__head page-section__head--spaced" id="m42-section-head"></header>
+
+          <div
+            class="m42-panel"
+            id="m42-v3-root"
+            role="region"
+            aria-label="Mandala42 Protocol"
+            tabindex="0"
+          ></div>
+        </div>
+
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>

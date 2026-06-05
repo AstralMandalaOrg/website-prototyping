@@ -47,6 +47,7 @@
     const head = document.getElementById(elementId);
     if (!head || !section) return;
     head.innerHTML = "";
+    head.classList.add("page-section__head--center");
     if (section.eyebrow) head.appendChild(el("p", { className: "eyebrow" }, [section.eyebrow]));
     head.appendChild(el("h2", { className: "section-title" }, [section.title]));
     if (section.lead) head.appendChild(el("p", { className: "section-lead" }, [section.lead]));
@@ -77,24 +78,12 @@
     ]);
   }
 
-  function renderLadder() {
-    const root = document.getElementById("ladder-v3-root");
-    if (!root || !data.ladder) return;
-    data.ladder.forEach((product, i) => {
+  function renderLadder(rootId, products) {
+    const root = document.getElementById(rootId);
+    if (!root || !products) return;
+    products.forEach((product, i) => {
       root.appendChild(renderProductCard(product, i + 1));
     });
-  }
-
-  function renderTeaserBox(rootId, box) {
-    const root = document.getElementById(rootId);
-    if (!root || !box) return;
-    root.appendChild(
-      el("article", { className: "page-teaser" }, [
-        el("h3", { className: "page-teaser__title" }, [box.title]),
-        el("p", { className: "page-teaser__body" }, [box.body]),
-        el("a", { className: "btn btn--primary", href: box.cta.href }, [box.cta.label]),
-      ])
-    );
   }
 
   function renderFreeSection() {
@@ -106,7 +95,7 @@
 
     section.offers.forEach((offer) => {
       root.appendChild(
-        el("article", { className: "free-card" }, [
+        el("article", { className: "free-card free-card--centered" }, [
           el("h3", { className: "free-card__name" }, [offer.name]),
           el("p", { className: "free-card__price" }, [offer.price]),
           el("p", { className: "free-card__detail" }, [offer.detail]),
@@ -117,6 +106,46 @@
         ])
       );
     });
+  }
+
+  function renderMandala42Card(product) {
+    const flow = product.flow || [];
+    const flowParts = [];
+    flow.forEach((step, i) => {
+      if (i > 0) {
+        flowParts.push(el("span", { className: "m42-card__flow-sep", "aria-hidden": "true" }, ["›"]));
+      }
+      flowParts.push(el("span", { className: "m42-card__flow-step" }, [step]));
+    });
+
+    return el("article", { className: "product-card product-card--wide m42-card" }, [
+      el("header", { className: "m42-card__head" }, [
+        el("h3", { className: "product-card__name" }, [product.name]),
+        el("p", { className: "product-card__price" }, [product.price]),
+        el("p", { className: "product-card__role" }, [product.role]),
+      ]),
+      el("div", { className: "m42-card__flow" }, flowParts),
+      el(
+        "ul",
+        { className: "m42-card__bullets product-card__bullets" },
+        (product.bullets || []).map((b) => el("li", null, [b]))
+      ),
+      el("div", { className: "product-card__actions m42-card__actions" }, [
+        primaryButton(product.ctaPrimary),
+        learnMoreForItem(product),
+      ]),
+    ]);
+  }
+
+  function renderMandala42Section() {
+    const section = data.mandala42Section;
+    if (!section) return;
+
+    renderSectionHead("m42-section-head", section);
+
+    const root = document.getElementById("m42-v3-root");
+    if (!root || !section.product) return;
+    root.appendChild(renderMandala42Card(section.product));
   }
 
   function renderPartnershipsPage() {
@@ -162,7 +191,7 @@
   } else {
     renderFreeSection();
     renderSectionHead("v3-section-head", data.section);
-    renderLadder();
-    renderTeaserBox("partnership-teaser-root", data.partnershipTeaser);
+    renderLadder("ladder-v3-root", data.ladder);
+    renderMandala42Section();
   }
 })();
