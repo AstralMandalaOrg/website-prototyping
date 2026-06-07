@@ -16,12 +16,12 @@ window.AM_V3_DATA = {
   },
   freeSection: {
     eyebrow: "Dip your toe in",
-    title: "Free",
+    title: "Gifted",
     offers: [
       {
         id: "sayit",
         name: "SayIt",
-        price: "Free",
+        price: "Gifted",
         detail: "Send a SayIt — share nurture with someone who matters.",
         pageSlug: "sayit",
         ctaPrimary: { label: "Try SayIt", href: "https://sayit.astralmandala.com", external: true },
@@ -87,7 +87,7 @@ window.AM_V3_DATA = {
       price: "£XXX per person",
       role: "Full programme for lasting change",
       pageSlug: "mandala42",
-      flow: ["14 day Nourishment", "42 day Core", "14 day Integration"],
+      flow: ["14 day Nourishment", "42 day Core", "28 day Integration"],
       bullets: [
         "84-day limbic reset",
         "1-to-1 mentor support throughout",
